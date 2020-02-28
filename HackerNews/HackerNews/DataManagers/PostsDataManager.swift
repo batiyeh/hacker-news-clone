@@ -16,9 +16,9 @@ public protocol PostsTableViewDelegate: class {
 class PostsTableViewDataManager: NSObject, UITableViewDelegate, UITableViewDataSource {
     var posts: [Post] = []
     let postsViewModel: PostsViewable
-    public weak var delegate: PostsTableViewDelegate?
-    private weak var tableView: UITableView?
     private let disposeBag = DisposeBag()
+    public weak var tableView: UITableView?
+    public weak var delegate: PostsTableViewDelegate?
     
     public init(postsViewModel: PostsViewable) {
         self.postsViewModel = postsViewModel

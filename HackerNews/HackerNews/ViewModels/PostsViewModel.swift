@@ -54,7 +54,6 @@ class PostsViewModel: PostsViewable {
             self.posts.accept(self.posts.value + newPosts)
         }, onError: { [weak self] (error) in
             self?.showBanner.accept(true)
-            print(error)
         }).disposed(by: disposeBag)
     }
     
