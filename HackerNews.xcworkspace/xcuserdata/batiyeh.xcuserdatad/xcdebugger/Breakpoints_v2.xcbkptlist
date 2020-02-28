@@ -7,31 +7,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BE74CEA6-E946-4B5A-9345-D86F77E28BE1"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HackerNews/HackerNews/ViewModels/PostsViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "fetchPosts()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "386DAB45-B3EA-43A5-99A9-FD68EEDAE17F"
+            uuid = "6F437BA2-C87A-4152-9C41-27AAD22381A3"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HackerNews/HackerNews/Networking/Networking.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "handleResponse(observer:data:response:error:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -39,15 +23,111 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4FF51E2E-D179-43CA-90ED-050BFAC1A524"
+            uuid = "AD83E57D-4C3F-4FAC-A058-BDE4498F6447"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HackerNews/HackerNews/Networking/Networking.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "handleResponse(observer:data:response:error:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1B1A3270-A71B-4657-ACFC-1548C7B362B7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HackerNews/HackerNews/Networking/Networking.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "handleResponse(observer:data:response:error:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7C1B6F18-F005-46FA-9160-18D635477C08"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HackerNews/HackerNews/Networking/Networking.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "request(request:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7C1B6F18-F005-46FA-9160-18D635477C08 - 6865d0901d9bb5a0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (RxSwift.AnyObserver&lt;A&gt;) -&gt; RxSwift.Disposable in HackerNews.Networking.request&lt;A where A: Swift.Decodable&gt;(request: Swift.Optional&lt;Foundation.URLRequest&gt;) -&gt; RxSwift.Observable&lt;A&gt;"
+                  moduleName = "HackerNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/batiyeh/Development/ios-hacker-news/HackerNews/HackerNews/Networking/Networking.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "1093">
+               </Location>
+               <Location
+                  uuid = "7C1B6F18-F005-46FA-9160-18D635477C08 - 70b0ecb409a1bacb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in closure #1 (RxSwift.AnyObserver&lt;A&gt;) -&gt; RxSwift.Disposable in HackerNews.Networking.request&lt;A where A: Swift.Decodable&gt;(request: Swift.Optional&lt;Foundation.URLRequest&gt;) -&gt; RxSwift.Observable&lt;A&gt;"
+                  moduleName = "HackerNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/batiyeh/Development/ios-hacker-news/HackerNews/HackerNews/Networking/Networking.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2E02F28A-CB3A-4EB7-B818-3EF070A8A871"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HackerNews/HackerNews/Networking/Networking.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "handleResponse(observer:data:response:error:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6F5BC837-0B88-4DA7-AE3E-7D752934571C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HackerNews/HackerNews/Networking/Networking.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "handleResponse(observer:data:response:error:)"
             landmarkType = "7">
          </BreakpointContent>

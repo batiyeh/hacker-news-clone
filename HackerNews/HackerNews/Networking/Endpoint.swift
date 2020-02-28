@@ -26,11 +26,12 @@ public extension Endpoint {
         var request = URLRequest(url: url)
         request.httpMethod = self.method.rawValue
         request.addValue("application/json", forHTTPHeaderField: "Accept")
+        request.timeoutInterval = 30
         return request
     }
     
     func buildUrl() -> URL? {
-        var urlString = self.baseUrl + self.path
+        let urlString = self.baseUrl + self.path
         let url = URL(string: urlString)
         return url
     }

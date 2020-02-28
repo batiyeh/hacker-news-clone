@@ -15,18 +15,14 @@ public protocol PostsTableViewDelegate: class {
 
 class PostsTableViewDataManager: NSObject, UITableViewDelegate, UITableViewDataSource {
     var posts: [Post] = []
-    let networking: Networkable
+    let postsViewModel: PostsViewable
     public weak var delegate: PostsTableViewDelegate?
     private weak var tableView: UITableView?
     private let disposeBag = DisposeBag()
     
-    public init(networking: Networkable) {
-        self.networking = networking
+    public init(postsViewModel: PostsViewable) {
+        self.postsViewModel = postsViewModel
         super.init()
-    }
-    
-    public convenience override init() {
-        self.init(networking: Networking())
     }
     
     public func setup(tableView: UITableView, editingStyle: UITableViewCell.EditingStyle = .none) {
@@ -79,6 +75,15 @@ class PostsTableViewDataManager: NSObject, UITableViewDelegate, UITableViewDataS
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let post = posts[indexPath.row]
-        self.delegate?.postTapped(url: post.url)
+        
+        if let url = post.url {
+            self.delegate?.postTapped(url: url)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row + 3 == posts.count {
+            postsViewModel.fetchAdditionalPosts(start: posts.count)
+        }
     }
 }

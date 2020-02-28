@@ -13,13 +13,13 @@ public struct Post: Decodable {
     let id: Int
     let score: Int
     let title: String
-    let url: String
+    let url: String?
     
     public init(by: String,
                 id: Int,
                 score: Int,
                 title: String,
-                url: String) {
+                url: String?) {
         self.by = by
         self.id = id
         self.score = score

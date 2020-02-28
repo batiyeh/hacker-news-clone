@@ -25,8 +25,17 @@ class PostTableViewCell: UITableViewCell {
     lazy var authorLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 12, weight: .light)
-        label.numberOfLines = 1
+        label.numberOfLines = 0
         label.textColor = .gray
+        return label
+    }()
+    
+    lazy var scoreLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 14, weight: .light)
+        label.numberOfLines = 0
+        label.textColor = .gray
+        label.textAlignment = .center
         return label
     }()
     
@@ -50,11 +59,13 @@ class PostTableViewCell: UITableViewCell {
     public func configure(post: Post) {
         titleLabel.text = post.title
         authorLabel.text = post.by
+        scoreLabel.text = String(post.score) + "\n points"
     }
     
     private func layoutView() {
         verticalStackView.addArrangedSubview(titleLabel)
         verticalStackView.addArrangedSubview(authorLabel)
+        view.addSubview(scoreLabel)
         view.addSubview(verticalStackView)
         contentView.addSubview(view)
         
@@ -74,8 +85,15 @@ class PostTableViewCell: UITableViewCell {
             make.leading.equalToSuperview()
         }
         
+        scoreLabel.snp.remakeConstraints { make in
+            make.leading.equalToSuperview()
+            make.width.equalTo(50)
+            make.centerY.equalToSuperview()
+        }
+        
         verticalStackView.snp.remakeConstraints { make in
-            make.top.bottom.leading.trailing.equalToSuperview()
+            make.leading.equalTo(scoreLabel.snp.trailing).offset(15)
+            make.top.bottom.trailing.equalToSuperview()
         }
     }
 }

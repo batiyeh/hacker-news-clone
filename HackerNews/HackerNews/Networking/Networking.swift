@@ -25,7 +25,8 @@ public class Networking: Networkable {
                 let task = URLSession.shared.dataTask(with: request) { [weak self] (data, response, error) in
                     self?.handleResponse(observer: observer, data: data, response: response, error: error)
                 }
-                return self.cancelTask(task: task)
+                task.resume()
+                return Disposables.create { task.cancel() }
             } else {
                 return self.handleError(observer: observer, error: NetworkError.badUrl)
             }
@@ -43,7 +44,6 @@ public class Networking: Networkable {
         } catch let error {
             observer.onError(error)
         }
-        
         observer.onCompleted()
     }
     
@@ -51,10 +51,5 @@ public class Networking: Networkable {
         observer.onError(error)
         observer.onCompleted()
         return Disposables.create()
-    }
-    
-    private func cancelTask(task: URLSessionDataTask) -> Cancelable {
-        task.resume()
-        return Disposables.create { task.cancel() }
     }
 }

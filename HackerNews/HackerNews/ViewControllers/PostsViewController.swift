@@ -23,7 +23,7 @@ class PostsViewController: UIViewController {
     
     init(postsViewModel: PostsViewable) {
         self.postsViewModel = postsViewModel
-        self.postsDataManager = PostsTableViewDataManager()
+        self.postsDataManager = PostsTableViewDataManager(postsViewModel: postsViewModel)
         super.init(nibName: nil, bundle: nil)
         self.postsDataManager.delegate = self
     }
@@ -41,7 +41,7 @@ class PostsViewController: UIViewController {
         setupView()
         postsObservable()
         postsDataManager.setup(tableView: postsView.tableView)
-        postsViewModel.fetchPosts()
+        postsViewModel.fetchFirstPosts()
     }
     
     private func postsObservable() {
