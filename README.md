@@ -1,6 +1,6 @@
 # Hacker News Clone
 
-Built using MVVM + Coordinators. For network requests I chose to go with a starting a basic URL session wrapper using RxSwift's Observables rather than something like Alamofire (which I have also used in the past). I unit tested much of what I could and included a small UI test. Ideally I would have written a solution for mocking network calls for the UI tests but unfortunately I ran out of time before I could do so. Thanks for taking the time to review the project!
+Basic Hacker News post viewer built for an interview task. Built using MVVM + Coordinators.
 
 
 ## Installation
